@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="utf-8">
+    <title>Home</title>
     <link rel="stylesheet" href="assets/style.css">
 </head>
 
@@ -10,11 +11,11 @@
     <script src="assets/scripts.js"></script>
     <h1 style="font-size: 60px; margin: 0px; color: var(--accent-light);">welcome back</h1>
     <div id="clock"></div> <!-- not the best impl but it works ig -->
-    search on google <input id="search" placeholder="hello world!" onkeypress="return search(event)"> <br>
+    search on google <input id="search" placeholder="hello world!" onkeypress="return search(event)" autofocus> <br>
     <hr style="color: var(--accent);"> <br>
 
-    <table>
-
+    <!-- the main menu. loadMenu(0) -->
+    <table id="table-main">
         <tr>
             <td>school</td>
             <td class="table-divide">
@@ -22,7 +23,7 @@
                 <a href="https://web.whatsapp.com">wha</a>
                 <a href="https://teams.microsoft.com/">tms</a>
                 <a href="https://wordcounter.net/">wct</a>
-                <a href="https://docs.google.com">gdc</a>
+                <a href="https://docs.google.com/document/u/0">gdc</a>
                 <a href="https://lichess.org">lch</a>
             </td>
         </tr>
@@ -61,13 +62,13 @@
         <tr>
             <td>coding</td>
             <td class="table-divide">
-                <a href="https://github.com">ghb</a>
+                <a href="https://github.com">git</a>
                 <a href="https://stackoverflow.com/">stk</a>
                 <a href="https://www.w3schools.com">w3s</a>
                 <a href="https://id.heroku.com/login">hku</a>
                 <a href="https://replit.com/">rpl</a>
                 <a href="https://hub.spigotmc.org/javadocs/bukkit/index.html">spg</a>
-                <a href="http://127.0.0.1:8080/">127</a>
+                <!--<a href="http://127.0.0.1:8080/">127</a>-->
             </td>
         </tr>
 
@@ -76,10 +77,8 @@
             <td class="table-divide">
                 <a href="https://www.minecraft.net/en-us">min</a>
                 <a href="https://www.curseforge.com/minecraft/mc-mods">csf</a>
-                <a href="https://intent.store">int</a>
-                <a href="https://thealtening.com">alt</a>
-                <a href="https://meteorclient.com/">mcl</a>
                 <a href="https://aternos.org/server/">atn</a>
+                <a href="https://store.steampowered.com/">stm</a>
             </td>
         </tr>
 
@@ -89,14 +88,115 @@
                 <a href="https://anonfiles.com/">anf</a>
                 <a href="https://obfuscator.uo1.net/">obf</a>
                 <a href="https://mcasset.cloud">mca</a>
-                <a href="https://aresclient.org/">acl</a>
-                <a href="https://snipeware.cf/">spw</a>
                 <a href="https://solarpedia.herokuapp.com/">spd</a>
-                <a href="https://wings.io/">wgs</a>
+                <a href="https://piratebay-proxylist.com/">tpb</a>
+            </td>
+        </tr>
+    </table>
+
+    <!-- extended school stuffs. loadMenu(1) -->
+    <table id="table-sch" style="display: none;">
+        <tr>
+            <td colspan="2" style="text-align: center; padding-bottom: 15px;">open these in IRL container tabs</td>
+        </tr>
+
+        <tr>
+            <td><span style="color: var(--accent); font-weight: bold;">IMPORTANT</span></td>
+            <td class="table-divide">
+                <a href="https://calendar.google.com/calendar/">g_calendar</a>
+                <a href="https://teams.microsoft.com/">ms_teams</a>
             </td>
         </tr>
 
+        <tr>
+            <td>communications</td>
+            <td class="table-divide">
+                <a href="https://web.whatsapp.com">whatsapp</a>
+                <a href="https://mail.google.com/mail/u/0/#inbox">gmail</a>
+                <a href="https://outlook.live.com/">ms_outlook</a>
+            </td>
+        </tr>
+
+        <tr>
+            <td>writing</td>
+            <td class="table-divide">
+                <a href="https://wordcounter.net/">wordcounter</a>
+                <a href="https://www.paraphraser.io/">paraphraser</a>
+                <a href="https://www.scribbr.com/apa-citation-generator/">citation_gen</a>
+                <a href="https://www.deepl.com/translator/">deepl</a>
+            </td>
+        </tr>
+
+        <tr>
+            <td>essentials</td> <!-- this section only exists because my new computer doesnt have ms word lol -->
+            <td class="table-divide">
+                <a href="https://docs.google.com/document/u/0">g_docs</a>
+                <a href="https://docs.google.com/presentation/u/0">g_slides</a>
+                <a href="https://docs.google.com/forms/u/0">g_forms</a>
+                <a href="https://www.office.com/launch/forms">ms_forms</a>
+            </td>
+        </tr>
+
+        <tr>
+            <td>cca</td>
+            <td class="table-divide">
+                <a href="https://lichess.org">lichess</a>
+                <a href="https://chess.com">chess.com</a>
+            </td>
+        </tr>
     </table>
+
+    <!-- g1galovaniac gaming mortals! loadMenu(2) -->
+    <table id="table-games" style="display: none;">
+        <tr>
+            <td>hypixel</td>
+            <td class="table-divide">
+                <a href="https://intent.store/">int</a>
+                <a href="https://snipeware.xyz/">snp</a>
+                <a href="https://moonx.gg/">mnx</a>
+                <a href="https://flux.today">flx</a>
+                <a href="https://thealtening.com/">alt</a>
+            </td>
+        </tr>
+
+        <tr>
+            <td>1.12 free</td>
+            <td class="table-divide">
+                <a href="https://inertiaclient.com/Index.php">wwe</a>
+                <a href="https://github.com/WurstPlus/wurst-plus-three/">wp3</a>
+                <a href="https://github.com/moomooooo/postmanplusplus">psm</a>
+                <a href="https://github.com/ionar2/spidermod">slh</a>
+                <a href="https://github.com/IUDevman/gamesense-client">gms</a>
+                <a href="https://github.com/Gopro336/CLEAN_Phobos_1.9.0-BUILDABLE-SRC">pbs</a>
+            </td>
+        </tr>
+
+        <tr>
+            <td>1.12 premium</td>
+            <td class="table-divide">
+                <a href="https://www.futureclient.net/index.php">ftr</a>
+                <a href="https://rusherhack.org/">rsh</a>
+                <a href="https://konasclient.com/">kns</a>
+                <a href="https://abyssclient.com/">aby</a>
+            </td>
+        </tr>
+
+        <tr>
+            <td>latest</td>
+            <td class="table-divide">
+                <a href="https://meteorclient.com">mtr</a>
+                <a href="https://aresclient.org">ars</a>
+                <a href="https://jexclient.com/">jex</a>
+                <a href="https://github.com/cornos/Atomic">atm</a>
+            </td>
+        </tr>
+    </table>
+
+    <br>
+    <!-- footer with a bunch of buttons for extended menus -->
+    <div class="footer">
+        <button onclick="loadMenus(0)">main</button> <button onclick="loadMenus(1)">school</button> <button onclick="loadMenus(2)">clients</button>
+    </div>
 </body>
 
 </html>

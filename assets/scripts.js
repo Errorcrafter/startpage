@@ -29,6 +29,29 @@ function search(e) {
     }
 }
 
+function loadMenus(x) {
+    var mainMenu = document.getElementById("table-main");      // 0
+    var schMenu = document.getElementById("table-sch");        // 1
+    var clientMenu = document.getElementById("table-games");   // 2
+
+    var dispShow = "margin-left: auto; margin-right: auto; display: unset;"
+    var dispHide = "margin-left: auto; margin-right: auto; display: none;"
+
+    if (x==0) {
+        mainMenu.style = dispShow;
+        schMenu.style = dispHide;
+        clientMenu.style = dispHide;
+    } else if (x==1) {
+        mainMenu.style = dispHide;
+        schMenu.style = dispShow;
+        clientMenu.style = dispHide;
+    } else if (x==2) {
+        mainMenu.style = dispHide;
+        schMenu.style = dispHide;
+        clientMenu.style = dispShow;
+    }
+}
+
 window.onload = () => {
 
     // create a motd to set as search

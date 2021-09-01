@@ -4,7 +4,7 @@
     --accent: #e63535;
     --accent-light: #d44545;
     --bg: #0f0f0f;
-    --bg-light: #353535;
+    --bg-light: #202020;
 }
 
 html {
@@ -44,6 +44,7 @@ table {
     border-collapse: collapse;
     margin-left: auto;
     margin-right: auto;
+    display: unset;
 }
 
 tr {
@@ -84,11 +85,35 @@ a:visited {
 /* mouse over link */
 a:hover {
     color: var(--accent-light);
-    text-decoration: none;
+    text-decoration: underline;
 }  
 
 /* selected link */
 a:active {
     color: var(--accent-light);
-    text-decoration: none;
+    text-decoration: underline;
 } 
+
+button {
+    border: 0px;
+    border-radius: 12.5px;
+    background-color: var(--bg-light);
+    color: white;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 20px;
+    padding: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+button:hover {
+    background-color: #282828;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    margin-bottom: 20px;
+}
